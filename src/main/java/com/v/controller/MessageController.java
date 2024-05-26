@@ -129,14 +129,7 @@ public class MessageController {
 		return msg;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	/*
 	 * //API consumes xml/json/text - produces nothing
 	 * 
@@ -198,21 +191,7 @@ public class MessageController {
 	    }
 
 	   	  
-	    
-	   
-	 
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
+// API consumes xml/json/text - produces xml/json/text	    
 	    @PostMapping(path = "consumesXml_Json_TextProducesXml_Json_Text",
 	    		consumes = {"application/xml", "application/json", "text/plain"},
 	    		produces = {"application/xml", "application/json", "text/plain"})
@@ -250,9 +229,6 @@ public class MessageController {
 		    	            // Handle unsupported media type
 		    	            return "Unsupported media type: " + acceptHeaderValue;
 		    	        }
-		            	
-		            	
-		            	
 		            } else if (contentType.equals("application/xml")) { // ===============================================> XML DATA
 		            	String acceptHeaderValue = SupporterClass.determineRequestedMediaType(request);
 
@@ -282,16 +258,11 @@ public class MessageController {
 
 		    	             // Convert XML data to text
 		    	             String textData = SupporterClass.getTextContent(rootElement);
-
-		    	        	
 		    	           	return textData;
 		    	        } else {
 		    	            // Handle unsupported media type
 		    	            return "Unsupported media type: " + acceptHeaderValue;
 		    	        }
-		    	        
-		    	        
-		    	        
 		            } else { // ========================================================================> TEXT DATA
 		            	String acceptHeaderValue = SupporterClass.determineRequestedMediaType(request);
 
@@ -309,28 +280,5 @@ public class MessageController {
 		        } else {
 		              throw new UnsupportedOperationException("Unsupported media type");
 		        }
-	    	
 	    }
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-
 }
